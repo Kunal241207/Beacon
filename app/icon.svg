@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144" fill="none" role="img" aria-labelledby="beacon-icon-title">
+  <title id="beacon-icon-title">Beacon</title>
+  <defs>
+    <clipPath id="beacon-icon-clip">
+      <path d="M0 12.04A11.8 11.8 0 0 1 16.62 1.27L69.34 24.83A4.5 4.5 0 0 1 72 28.94L72 45.54A2 2 0 0 1 70.95 47.31L59.24 53.6A2.6 2.6 0 0 0 59.16 58.14L71.01 65.02A2 2 0 0 1 72 66.75L72 83.96A4.5 4.5 0 0 1 69.41 88.03L13.7 114.09A9.62 9.62 0 0 1 0 105.38L0 52.83A1.8 1.8 0 0 1 0.84 51.31L8.77 46.33A2.4 2.4 0 0 0 8.65 42.19L0.93 37.93A1.8 1.8 0 0 1 0 36.36L0 12.04Z"/>
+    </clipPath>
+    <linearGradient id="beacon-icon-band" gradientUnits="userSpaceOnUse" x1="73.58" y1="19.28" x2="17.13" y2="4.49">
+      <stop stop-color="#364EFD"/>
+      <stop offset="0.45" stop-color="#3767FB"/>
+      <stop offset="1" stop-color="#40A3FD"/>
+    </linearGradient>
+    <linearGradient id="beacon-icon-upper" gradientUnits="userSpaceOnUse" x1="-10.15" y1="32.41" x2="-0.27" y2="0.85">
+      <stop stop-color="#4742FA"/>
+      <stop offset="0.35" stop-color="#5D44FB"/>
+      <stop offset="1" stop-color="#694BFB"/>
+    </linearGradient>
+    <linearGradient id="beacon-icon-lower" gradientUnits="userSpaceOnUse" x1="27.24" y1="69.85" x2="38.98" y2="99.98">
+      <stop stop-color="#1F25BB"/>
+      <stop offset="0.35" stop-color="#3244F4"/>
+      <stop offset="1" stop-color="#4149FE"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(38.2 18) scale(0.939)">
+    <g clip-path="url(#beacon-icon-clip)">
+      <path d="M0 12.04A11.8 11.8 0 0 1 16.62 1.27L69.34 24.83A4.5 4.5 0 0 1 72 28.94L72 45.54A2 2 0 0 1 70.95 47.31L59.24 53.6A2.6 2.6 0 0 0 59.16 58.14L71.01 65.02A2 2 0 0 1 72 66.75L72 83.96A4.5 4.5 0 0 1 69.41 88.03L13.7 114.09A9.62 9.62 0 0 1 0 105.38L0 52.83A1.8 1.8 0 0 1 0.84 51.31L8.77 46.33A2.4 2.4 0 0 0 8.65 42.19L0.93 37.93A1.8 1.8 0 0 1 0 36.36L0 12.04Z" fill="url(#beacon-icon-band)"/>
+      <path d="M-10 -30L90 -30L90 6.36L13.34 43.62A2.4 2.4 0 0 1 11.13 43.56L-10 31.9L-10 -30Z" fill="url(#beacon-icon-upper)"/>
+      <path d="M-10 85.33L53.92 56.35A2.6 2.6 0 0 1 56.3 56.47L90 76.06L90 150L-10 150L-10 85.33Z" fill="url(#beacon-icon-lower)"/>
+    </g>
+  </g>
+</svg>
