@@ -12,6 +12,7 @@ const LOWER_PLANE =
 
 const SIZES = {
   default: { mark: 56, text: 36, gap: 22 },
+  header: { mark: 44, text: 28, gap: 17 },
   compact: { mark: 36, text: 23, gap: 14 },
 } as const;
 

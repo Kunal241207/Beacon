@@ -304,3 +304,60 @@ export function AccessibleIcon({ size = 28, ...props }: IconProps) {
     </Outline>
   );
 }
+
+export function BellIcon({ size = 20, ...props }: IconProps) {
+  return (
+    <Outline size={size} {...props}>
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+      <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+    </Outline>
+  );
+}
+
+export function BookOpenIcon({ size = 24, ...props }: IconProps) {
+  return (
+    <Outline size={size} {...props}>
+      <path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z" />
+      <path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z" />
+    </Outline>
+  );
+}
+
+export function BoltIcon({ size = 24, ...props }: IconProps) {
+  return (
+    <Outline size={size} {...props}>
+      <polygon points="13 2 4 14 11 14 11 22 20 10 13 10 13 2" />
+    </Outline>
+  );
+}
+
+export function TargetPlayIcon({ size = 24, ...props }: IconProps) {
+  return (
+    <Outline size={size} {...props}>
+      <path d="M12 22a10 10 0 1 1 10-10" />
+      <path d="M12 17a5 5 0 1 1 5-5" />
+      <polygon points="10.5 9.5 15 12 10.5 14.5 10.5 9.5" fill="currentColor" stroke="none" />
+    </Outline>
+  );
+}
+
+export function ArrowRightLongIcon({ size = 18, ...props }: IconProps) {
+  return (
+    <Outline size={size} {...props}>
+      <line x1="3" y1="12" x2="20" y2="12" />
+      <polyline points="14 6 20 12 14 18" />
+    </Outline>
+  );
+}
+
+export function WaveformIcon({ size = 24, ...props }: IconProps) {
+  return (
+    <Outline size={size} {...props}>
+      <line x1="3" y1="9.5" x2="3" y2="14.5" />
+      <line x1="7.5" y1="6" x2="7.5" y2="18" />
+      <line x1="12" y1="3" x2="12" y2="21" />
+      <line x1="16.5" y1="7" x2="16.5" y2="17" />
+      <line x1="21" y1="10" x2="21" y2="14" />
+    </Outline>
+  );
+}

@@ -10,8 +10,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Beacon Design System",
-  description: "A unified design language for Beacon — search what you want, learn right there.",
+  title: "Beacon — Search what you want. Learn right there.",
+  description:
+    "Beacon understands what you want to learn and finds the exact lessons across all your courses.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
