@@ -200,11 +200,9 @@ function SectionHeader({
 function Label({
   className = "",
   children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) {
-  return <p className={`ds-label ${className}`}>{children}</p>;
+  ...props
+}: React.LabelHTMLAttributes<HTMLLabelElement>) {
+  return <label {...props} className={`ds-label ${className}`}>{children}</label>;
 }
 
 function Caption({
@@ -457,9 +455,9 @@ export default function DesignSystemPage() {
                   <tbody>
                     {BUTTON_STATES.map((row) => (
                       <tr key={row.state}>
-                        <td className="py-2.5 pr-2 text-caption font-semibold text-neutral-900">
+                        <th scope="row" className="py-2.5 pr-2 text-caption font-semibold text-neutral-900">
                           {row.label}
-                        </td>
+                        </th>
                         {BUTTON_VARIANTS.map((column) => (
                           <td key={column.variant} className="py-2.5 px-1.5">
                             <Button
@@ -484,12 +482,12 @@ export default function DesignSystemPage() {
             <div className="space-y-3">
               <SectionHeader number="08" title="INPUTS" />
               <div>
-                <Label className="mb-1.5">Search Input</Label>
-                <SearchInput />
+                <Label htmlFor="design-system-search" className="mb-1.5">Search Input</Label>
+                <SearchInput id="design-system-search" />
               </div>
               <div>
-                <Label className="mb-1.5">Select</Label>
-                <Select />
+                <Label htmlFor="design-system-select" className="mb-1.5">Select</Label>
+                <Select id="design-system-select" />
               </div>
             </div>
             <SpecList title="Field Specs" items={FIELD_SPECS} />

@@ -101,12 +101,12 @@ function Hero() {
           <span className="inline-flex rounded-full bg-primary-100 px-3 py-1.5 text-label font-bold uppercase tracking-[0.12em] text-primary-600">Intelligent Learning</span>
           <h1 className="mt-5 font-display text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-neutral-900 sm:text-[46px] lg:text-[52px] xl:text-[56px]">Search what you want.<br /><span className="text-primary-600">Learn right there.</span></h1>
           <p className="mt-5 max-w-[480px] text-body-lg leading-normal text-neutral-500">Beacon understands what you want to learn and finds the exact lessons across all your courses.</p>
-          <form action="/search" method="get" className="mt-8 max-w-[730px]">
+          <form action="/" method="get" className="mt-8 max-w-[730px]">
             <label htmlFor="home-search" className="sr-only">Search your courses</label>
             <SearchInput id="home-search" name="q" size="lg" placeholder="Ask anything about your learning..." className="border-primary-300 shadow-sm" />
           </form>
           <div className="mt-4 flex max-w-[730px] flex-wrap gap-3">
-            {SUGGESTIONS.map((suggestion) => <Link key={suggestion} href={`/search?q=${encodeURIComponent(suggestion)}`} className="inline-flex rounded-md border border-neutral-200 bg-white px-4 py-2 text-small text-neutral-700 shadow-sm transition-colors hover:border-primary-300 hover:text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2">{suggestion}</Link>)}
+            {SUGGESTIONS.map((suggestion) => <Link key={suggestion} href={`/?q=${encodeURIComponent(suggestion)}`} className="inline-flex rounded-md border border-neutral-200 bg-white px-4 py-2 text-small text-neutral-700 shadow-sm transition-colors hover:border-primary-300 hover:text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2">{suggestion}</Link>)}
           </div>
         </div>
         <div className="hidden lg:block"><HeroArt /></div>
@@ -141,7 +141,7 @@ function CourseThumbnail({ course }: { course: FeaturedCourse }) {
 }
 
 function CourseCard({ course }: { course: FeaturedCourse }) {
-  return <article className="group flex flex-col rounded-md border border-neutral-200 bg-white p-2.5 shadow-sm transition-shadow hover:shadow-md"><CourseThumbnail course={course} /><div className="flex flex-1 flex-col px-2.5 pb-1 pt-4"><h3 className="text-[17px] font-bold leading-snug text-neutral-900"><Link href={`/courses/${course.slug}`} className="rounded-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 after:absolute after:inset-0">{course.title}</Link></h3><p className="mt-1.5 text-small leading-relaxed text-neutral-500">{course.summary}</p><div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-label font-medium text-neutral-500"><span className="inline-flex items-center gap-1.5"><BarChartIcon size={13} />{course.level}</span><span className="inline-flex items-center gap-1.5"><ClockIcon size={13} />{course.duration}</span><span className="inline-flex items-center gap-1.5"><ModulesIcon size={13} />{course.moduleCount} modules</span></div><div className="mt-4 flex justify-end border-t border-neutral-100 pt-3"><ArrowRightLongIcon size={18} className="text-neutral-900 transition-transform group-hover:translate-x-1" /></div></div></article>;
+  return <article className="group relative flex flex-col rounded-md border border-neutral-200 bg-white p-2.5 shadow-sm transition-shadow hover:shadow-md"><CourseThumbnail course={course} /><div className="flex flex-1 flex-col px-2.5 pb-1 pt-4"><h3 className="text-[17px] font-bold leading-snug text-neutral-900"><Link href={`/courses/${course.slug}`} className="rounded-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 after:absolute after:inset-0">{course.title}</Link></h3><p className="mt-1.5 text-small leading-relaxed text-neutral-500">{course.summary}</p><div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-label font-medium text-neutral-500"><span className="inline-flex items-center gap-1.5"><BarChartIcon size={13} />{course.level}</span><span className="inline-flex items-center gap-1.5"><ClockIcon size={13} />{course.duration}</span><span className="inline-flex items-center gap-1.5"><ModulesIcon size={13} />{course.moduleCount} modules</span></div><div className="mt-4 flex justify-end border-t border-neutral-100 pt-3"><ArrowRightLongIcon size={18} className="text-neutral-900 transition-transform group-hover:translate-x-1" /></div></div></article>;
 }
 
 function FeaturedCourses() {
